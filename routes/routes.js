@@ -65,10 +65,19 @@ router.post('/register', async (req, res) => {
       });
     }
     const hash = await encryptPass(password);
-    const newUser = await db.User.create({
-      username: username,
-      email: email,
+    await db.User.create({
+      username,
+      email,
       password: hash,
+    });
+    const token = await signJWT({ username, email });
+    res.status(201);
+    return res.json({
+      token,
+      user: {
+        username,
+        email,
+      },
     });
   } catch (err) {
     res.status(500);
@@ -77,13 +86,6 @@ router.post('/register', async (req, res) => {
       error: 'internal server error',
     });
   }
-  res.json({
-    token: 'aosdihfaksdlnmfasdfp9u981234123jk4nrasef',
-    user: {
-      username: 'registerendpoint',
-      email: 'billybob@gmail.com',
-    },
-  });
 });
 
 module.exports = router;
