@@ -5,6 +5,7 @@ const encryptPass = require('../lib/encryptPass');
 const comparePass = require('../lib/comparePass');
 
 router.post('/login', async (req, res) => {
+  console.log(req.body);
   const { email, password } = req.body;
   //TODO escaping queries
 
@@ -19,6 +20,12 @@ router.post('/login', async (req, res) => {
       where: { email },
       attributes: ['username', 'email', 'password'],
     });
+    if (!user) {
+      res.status(401);
+      return res.json({
+        error: 'incorrect email or password',
+      });
+    }
     const passwordIsMatch = await comparePass(password, user.password);
     if (!(user.email === email && passwordIsMatch)) {
       res.status(401);
