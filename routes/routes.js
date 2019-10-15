@@ -3,9 +3,20 @@ const db = require('../models/index');
 const signJWT = require('../lib/signjwt');
 const encryptPass = require('../lib/encryptPass');
 const comparePass = require('../lib/comparePass');
+const verifyJWT = require('../lib/verifyJWT');
+
+router.post('/verify-token', verifyJWT, async (req, res) => {
+  const { username, email } = req.body;
+  res.status(200);
+  return res.json({
+    user: {
+      username,
+      email,
+    },
+  });
+});
 
 router.post('/login', async (req, res) => {
-  console.log(req.body);
   const { email, password } = req.body;
   //TODO escaping queries
 
@@ -54,7 +65,7 @@ router.post('/login', async (req, res) => {
 router.post('/register', async (req, res) => {
   const { username, email, password } = req.body;
   if (!(username && email && password)) {
-    res.status(404);
+    res.status(400);
     return res.json({
       error: 'registration must include a username, email and password',
     });

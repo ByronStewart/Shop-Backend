@@ -1,0 +1,10 @@
+insert into stores (id, storeName, createdAt, updatedAt, userId) values (1, 'Avavee', '2019-08-20 03:25:15', '2018-10-26 03:38:09', 5);
+insert into stores (id, storeName, createdAt, updatedAt, userId) values (2, 'Yodel', '2019-09-08 11:59:53', '2019-02-19 12:49:10', 16);
+insert into stores (id, storeName, createdAt, updatedAt, userId) values (3, 'Avamm', '2018-10-30 21:10:35', '2019-07-31 09:37:50', 6);
+insert into stores (id, storeName, createdAt, updatedAt, userId) values (4, 'Brainsphere', '2019-09-11 07:24:02', '2019-08-10 04:26:53', 20);
+insert into stores (id, storeName, createdAt, updatedAt, userId) values (5, 'Mudo', '2018-12-03 22:57:42', '2019-04-18 11:26:36', 15);
+insert into stores (id, storeName, createdAt, updatedAt, userId) values (6, 'Eayo', '2019-01-03 16:35:16', '2019-04-05 00:07:10', 20);
+insert into stores (id, storeName, createdAt, updatedAt, userId) values (7, 'Dynazzy', '2019-05-03 07:21:53', '2018-12-09 01:25:31', 6);
+insert into stores (id, storeName, createdAt, updatedAt, userId) values (8, 'Browsecat', '2019-06-11 09:49:00', '2018-10-18 14:11:02', 13);
+insert into stores (id, storeName, createdAt, updatedAt, userId) values (9, 'Jaxspan', '2019-09-28 21:04:02', '2019-01-15 23:04:26', 7);
+insert into stores (id, storeName, createdAt, updatedAt, userId) values (10, 'Eidel', '2018-12-15 19:09:43', '2019-08-12 18:52:05', 15);

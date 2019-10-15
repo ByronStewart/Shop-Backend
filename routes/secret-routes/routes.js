@@ -8,18 +8,21 @@ const products = [
     name: 'grapes',
     store: "Bob's store",
     description: 'The juiciest grapes around',
+    price: '$5',
   },
   {
     id: 2,
     name: 'onions',
     store: "Jerry's store",
     description: 'The juiciest onions around',
+    price: '$5',
   },
   {
     id: 3,
     name: 'bananas',
     store: "Mary's store",
     description: 'The juiciest bananas around',
+    price: '$5',
   },
 ];
 
