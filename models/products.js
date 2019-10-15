@@ -15,6 +15,9 @@ Product.init(
     description: {
       type: DataTypes.TEXT,
     },
+    thumbnail: {
+      type: DataTypes.STRING,
+    },
   },
   { sequelize: db.sequelize, modelName: 'products' },
 );

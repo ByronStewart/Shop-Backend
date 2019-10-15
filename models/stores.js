@@ -10,6 +10,12 @@ Store.init(
       allowNull: false,
       unique: true,
     },
+    description: {
+      type: DataTypes.TEXT,
+    },
+    logo: {
+      type: DataTypes.STRING,
+    },
   },
   { sequelize: db.sequelize, modelName: 'stores' },
 );

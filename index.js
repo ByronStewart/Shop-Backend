@@ -9,7 +9,7 @@ db.sequelize
   .then(() => {
     console.log('Connection has been established successfully.');
 
-    db.sequelize.sync({ force: true }).then(() => console.log('user sync successful'));
+    db.sequelize.sync().then(() => console.log('user sync successful'));
 
     app.listen(PORT, () => console.log(`listening on port ${PORT}`));
   })
